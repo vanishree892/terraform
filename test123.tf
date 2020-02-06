@@ -34,11 +34,15 @@ resource "vsphere_virtual_machine" "vm" {
   wait_for_guest_net_timeout = 0
   guest_id = "centos7_64Guest"
   nested_hv_enabled =true
+    
+    network_interface {
+    network_id = ""
+  }
 
 
   disk {
    size             = 16
-   name             = "vanisid"
+   name             = "vanisid.vmdk"
    eagerly_scrub    = false
    thin_provisioned = true
   }
