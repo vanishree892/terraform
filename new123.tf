@@ -2,7 +2,7 @@ provider "vsphere" {
   version              = "1.11.0"
   user                 = "administrator@vpshere.local"
   password             = "Wipro@123"
-  vsphere_server       = "172.16.8.16"
+  vsphere_server       = "172.16.8.16:9443"
   allow_unverified_ssl = true
 }
 
