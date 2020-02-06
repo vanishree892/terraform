@@ -7,7 +7,7 @@ provider "vsphere" {
 
 resource "vsphere_virtual_machine" "myvm" {
   name = "vm-deleteme"
-
+resource_pool_id = 566
 
  num_cpus = 2
   memory   = 1024
