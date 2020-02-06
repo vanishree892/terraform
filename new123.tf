@@ -21,8 +21,10 @@ resource "vsphere_virtual_machine" "myvm" {
   }
 
   disk {
-    template  = "template-20171005.1-UbuntuTrusty-DS-10-SAS-1"
-    datastore = "Local_datastore2_65.79"
+   size             = 16
+   name             = "vanisid.vmdk"
+   eagerly_scrub    = false
+   thin_provisioned = true
    
   }
 }
