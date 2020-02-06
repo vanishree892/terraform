@@ -36,7 +36,8 @@ resource "vsphere_virtual_machine" "vm" {
   nested_hv_enabled =true
     
     network_interface {
-    network_id = ""
+    network_id   = "VM Network"
+    adapter_type = "Standard Network"
   }
 
 
