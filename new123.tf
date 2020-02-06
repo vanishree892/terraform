@@ -17,7 +17,7 @@ resource "vsphere_virtual_machine" "myvm" {
   dns_servers = ["8.8.8.8"]
 
   network_interface {
-    label = "VM Network"
+     network_id = ""
   }
 
   disk {
