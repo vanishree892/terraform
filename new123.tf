@@ -1,24 +1,28 @@
-resource "heroku_app" "web" {}
-
-# Create our DNSimple record to point to the
-# heroku application.
-resource "dnsimple_record" "web" {
-  domain = "test123.com"
-
-  name = "terraform"
-
-  # heroku_hostname is a computed attribute on the heroku
-  # application we can use to determine the hostname
-  value = "${heroku_app.web.heroku_hostname}"
-
-  type = "CNAME"
-  ttl  = 3600
+provider "vsphere" {
+  user                 = "administrator@vpshere.local"
+  password             = "Wipro@123"
+  vsphere_server       = "172.16.8.16"
+  allow_unverified_ssl = true
 }
 
-# The Heroku domain, which will be created and added
-# to the heroku application after we have assigned the domain
-# in DNSimple
-resource "heroku_domain" "foobar" {
-  app      = "test123"
-  hostname = "1.1.1.1"
+resource "vsphere_virtual_machine" "myvm" {
+  name = "vm-deleteme"
+
+  datacenter = "opendc-dc1"
+  cluster    = "SDXT7_CommonWorkload"
+
+  vcpu   = "1"
+  memory = "4096"
+
+  dns_servers = ["8.8.8.8"]
+
+  network_interface {
+    label = "VM Network"
+  }
+
+  disk {
+    template  = "template-20171005.1-UbuntuTrusty-DS-10-SAS-1"
+    datastore = "Local_datastore2_65.79"
+    type      = "thin"
+  }
 }
