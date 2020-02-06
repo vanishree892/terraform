@@ -23,7 +23,7 @@ data "vsphere_network" "mgmt_lan" {
  
 }
 
-resource "vsphere_virtual_machine" "vanisid" {
+resource "vsphere_virtual_machine" "vm" {
   name             = "vanisid"
   resource_pool_id = "566"
   datastore_id     = "1701"
