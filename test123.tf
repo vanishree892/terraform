@@ -44,7 +44,7 @@ resource "vsphere_virtual_machine" "vm" {
 
   disk {
    size             = 16
-   name             = "vanisid.vmdk"
+   label             = "vanisid.vmdk"
    eagerly_scrub    = false
    thin_provisioned = true
   }
