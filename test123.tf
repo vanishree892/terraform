@@ -4,6 +4,7 @@ provider "vsphere" {
     user = "administrator@vpshere.local"
     password = "Wipro@123"
     allow_unverified_ssl = true
+    persist_session         = false
 }
 
 ## Build VM
