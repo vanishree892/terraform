@@ -14,11 +14,7 @@ resource "vsphere_virtual_machine" "myvm" {
   vcpu   = "1"
   memory = "4096"
 
-  dns_servers = ["8.8.8.8"]
-
-  network_interface {
-     network_id = ""
-  }
+ 
 
   disk {
    size             = 16
