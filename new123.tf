@@ -1,4 +1,5 @@
 provider "vsphere" {
+  version              = "~> 1.4.1"
   user                 = "administrator@vpshere.local"
   password             = "Wipro@123"
   vsphere_server       = "172.16.8.16"
