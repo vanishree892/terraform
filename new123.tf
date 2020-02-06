@@ -8,8 +8,6 @@ provider "vsphere" {
 resource "vsphere_virtual_machine" "myvm" {
   name = "vm-deleteme"
 
-  datacenter = "opendc-dc1"
-  cluster    = "SDXT7_CommonWorkload"
 
  num_cpus = 2
   memory   = 1024
