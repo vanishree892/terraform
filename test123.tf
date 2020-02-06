@@ -37,7 +37,7 @@ resource "vsphere_virtual_machine" "vm" {
     
     network_interface {
     network_id   = "VM Network"
-    adapter_type = "Standard Network"
+    adapter_type = "vmxnet3"
   }
 
 
