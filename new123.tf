@@ -11,8 +11,8 @@ resource "vsphere_virtual_machine" "myvm" {
   datacenter = "opendc-dc1"
   cluster    = "SDXT7_CommonWorkload"
 
-  vcpu   = "1"
-  memory = "4096"
+ num_cpus = 2
+  memory   = 1024
 
  
 
