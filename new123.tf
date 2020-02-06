@@ -11,7 +11,9 @@ resource_pool_id = 566
 
  num_cpus = 2
   memory   = 1024
-
+ network_interface {
+    network_id = "VM Network"
+  }
  
 
   disk {
