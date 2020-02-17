@@ -1,4 +1,4 @@
 resource "local_file" "foo" {
     content     = "foo!"
-    filename = "D:/hello_terraform/test_terraform/test"
+    filename = "https://app.terraform.io/app/vani/workspaces/vani_test/runs/testnew123"
 }
