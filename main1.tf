@@ -1,4 +1,4 @@
 resource "local_file" "foo" {
     content     = "foo!"
-    filename = "test12345"
+    filename = "D:/hello_terraform/test_terraform/test"
 }
